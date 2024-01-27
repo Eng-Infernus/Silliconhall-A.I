@@ -14,7 +14,6 @@ data = pd.read_csv("student-mat.csv", sep=";")
 predict = "G3"
 
 data = data[["G1", "G2", "absences","failures", "studytime","G3"]]
-data = shuffle(data) # Optional - shuffle the data
 
 x = np.array(data.drop([predict], 1))
 y =np.array(data[predict])
